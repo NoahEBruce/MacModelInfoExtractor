@@ -2,7 +2,7 @@
  
 
 xmlFilePath="systemProfiler.xml"
-system_profiler -xml SPHardwareDataType > "$xmlFilePath" # Corrected to use variable
+system_profiler -xml SPHardwareDataType > "$xmlFilePath" 
 
 
 modelName=$( /usr/libexec/PlistBuddy -c 'Print :0:_items:0:machine_name' "$xmlFilePath" )
